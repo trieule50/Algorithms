@@ -62,3 +62,23 @@ function makeArrayConsecutive2(statues) {
 }
 
 // console.log(makeArrayConsecutive2(statues1))
+
+
+// Given a sequence of integers as an array, determine whether it is possible to obtain a strictly increasing sequence by removing no more than one element from the array.
+
+const sequence1 = [1, 2, 1, 2]
+
+function almostIncreasingSequence(sequence) {
+    let error = 0;
+    for(let i = 0; i < sequence.length; i++){
+        if(sequence[i] <= sequence[i-1]){
+            error++
+            if(sequence[i] <= sequence[i-2] && sequence[i+1] <= sequence[i-1]){
+                return false;
+            }
+        }
+    }
+    return error <= 1
+}
+
+console.log(almostIncreasingSequence(sequence1))
