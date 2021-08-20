@@ -9,3 +9,4 @@ A collection of algorithm challenges and my personal solutions.
 - [Count of Tiny Pairs](./countTinyPairs)
 - [Plus Minus](./plusMinus)
 - [Mini-Max]('./minimax)
+- [Time Conversion]('./timeConversion)
