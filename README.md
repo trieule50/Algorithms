@@ -7,3 +7,4 @@ A collection of algorithm challenges and my personal solutions.
 - [Largest Number](./largest_number)
 - [Palindrome](./checkPalindrome)
 - [Count of Tiny Pairs](./countTinyPairs)
+- [Plus Minus](./plusMinus)
