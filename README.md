@@ -8,3 +8,4 @@ A collection of algorithm challenges and my personal solutions.
 - [Palindrome](./checkPalindrome)
 - [Count of Tiny Pairs](./countTinyPairs)
 - [Plus Minus](./plusMinus)
+- [Mini-Max]('./minimax)
