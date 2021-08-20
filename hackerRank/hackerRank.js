@@ -26,4 +26,19 @@ function firstDuplicate(a) {
 
 // console.log(firstDuplicate(arr))
 
+// Given a string s consisting of small English letters, find and return the first instance of a non-repeating character in it. If there is no such character, return '_'.
 
+const str = "abacabad"
+
+function firstNotRepeatingCharacter(s) {
+    for (let i = 0; i < s.length; i++) {
+        let char = s[i];
+        if (s.indexOf(char) == i && s.indexOf(char, i + 1) == -1) {
+          return char;
+        }
+    }
+    return "_"
+    
+}
+
+// console.log(firstNotRepeatingCharacter(str))
