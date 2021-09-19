@@ -198,12 +198,28 @@ function gameWinner(colors) {
 // console.log(gameWinner('wwwbb'))
 
 
-function oddNumbers(l,r){
-    for(let i = l; i <=r; i++){
-        if(i % 2 !== 0){
-            console.log(i)
+// function oddNumbers(l,r){
+//     for(let i = l; i <=r; i++){
+//         if(i % 2 !== 0){
+//             console.log(i)
+//         }
+//     }
+// }
+
+// console.log(oddNumbers(3,9))
+
+function diagonalDifference(arr){
+    let a = 0;
+    let b = 0;
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j < arr.length; j++){
+            if(i===j){
+                a += arr[i][j];
+            }
+            if(i + j === arr.length - 1){
+                b += arr[i][j]
+            }
         }
     }
+    return Math.abs(a - b)
 }
-
-console.log(oddNumbers(3,9))
