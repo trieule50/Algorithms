@@ -223,3 +223,96 @@ function diagonalDifference(arr){
     }
     return Math.abs(a - b)
 }
+
+
+function maxInversions(arr) {
+    // Write your code here
+    let count = 0;
+    const sortArr = arr.sort(function(a,b){
+        return b - a;
+    })
+    // for(let i = 2; i <= sortArr.length; i++){
+    //     if(sortArr[1] > sortArr[i]){
+    //         count++
+
+    //     }
+    //     return count;
+    // }
+    for(let i = 0; i <= sortArr.length-2; i++){
+        for(let j = 1; j <= sortArr.length-1; j++){
+            for(let k = 2; k <= sortArr.length; k++){
+                if(sortArr[i] > sortArr[j] && sortArr[j] > sortArr[k]){
+                    count++
+                }
+            }
+        }
+    }
+    return count;
+}
+
+// console.log(maxInversions([5,8,6,1,4,5]))
+
+
+function condense(head){
+    // let array = [];
+    // for(let i = 0; i <= head.length; i++){
+    //     if(!array.includes(head[i])){
+    //         array.push(head[i])
+    //     }
+    // }
+    // return array.slice();
+    const string = head.toString()
+    const unique = [...new Set(string)];
+    const array = unique.map(Number);
+    const result = array.filter(numbersOnly);
+    function numbersOnly(val){
+        if(typeof(val) === 'number'){
+            return val;
+        }
+    }
+
+    return result;
+    
+}
+
+// console.log(condense([8,3,4,3,2,6,1,2,6]))
+
+function isPrime(n){
+    let div = []
+    if(n <=2){
+        return 1
+    }else{
+        for(let i = 2; i < n; i++){
+            if(n % i === 0){
+                div.push(i)
+                return div[0]
+            }
+        }
+        return 1
+    }
+    
+}
+
+// console.log(isPrime(37961921))
+
+function hackerCards(collection, d){
+    // let sortedCor = collection.sort((a,b) => a-b)
+    let missingCor = [];
+    let result=[];
+    for(let i = 1; i < d-1; i++){
+        if(!collection.includes(i)){
+            missingCor.push(i)
+        }
+    }
+    for(let j = 0; j <= missingCor.length; j++){
+        if(d > 0 && d >= missingCor[j]){
+            d = d - missingCor[j];
+            result.push(missingCor[j])
+            console.log(d)
+        }
+    }
+    return result
+    
+}
+
+console.log(hackerCards([4,6,12,8], 14))
