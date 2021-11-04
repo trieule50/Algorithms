@@ -315,4 +315,4 @@ function hackerCards(collection, d){
     
 }
 
-console.log(hackerCards([4,6,12,8], 14))
+// console.log(hackerCards([4,6,12,8], 14))
